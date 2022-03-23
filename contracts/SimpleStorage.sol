@@ -47,14 +47,15 @@ contract SimpleStorage {
     }
     function remove_from_add_countries_vote(string memory _text) public {
         uint index_val = remove_from_add_countries_vote_index(_text);
-        for (uint i = index_val; i <votes_tracker_add_country.length - 1; i++) {
+        for(uint i = index_val; i <votes_tracker_add_country.length - 1; i++) {
            votes_tracker_add_country[i] =votes_tracker_add_country[i + 1];
         }
-       votes[_text]=0;
-       for(uint i=0;i<unique_votes[_text].length;i++){
+        votes_tracker_add_country.pop();
+  
+        while(unique_votes[_text].length>0){
            unique_votes[_text].pop();
-       }
-       votes_tracker_add_country.pop();
+        }
+        votes[_text]=0;
     }
 
     function keep_track_add_country(string memory _text) public{

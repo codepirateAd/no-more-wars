@@ -326,7 +326,7 @@ html,body {
 }
 
 .skill--bg{
-  background: url("../assets/images/skill-background.png") no-repeat;
+  
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -564,7 +564,7 @@ html,body {
 }
 
 .slider--bg{
-  background: url("../assets/images/slider-background.png") no-repeat;
+  /* background: url("../assets/images/slider-background.png") no-repeat; */
   background-size: cover;
   position: relative;
   z-index: 1;

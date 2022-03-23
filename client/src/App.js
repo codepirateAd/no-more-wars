@@ -3,15 +3,12 @@ import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./getWeb3";
 import Home from "./Components/Home";
 import Nav from "./Components/Nav";
-import About from "./Components/About";
-import Countries from "./Components/Countries";
 
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import Contact from "./Components/Contact";
 import CountriesAddress from "./Components/CountriesAddress";
 import AddCountry from "./Components/AddCountry";
 import AddTreaty from "./Components/AddTreaty";
@@ -22,7 +19,7 @@ class App extends Component {
   state = { OwnerofContract: ' ', web3: null, accounts: null, contract: null, countries: [], 
             numberofCountries: 0, is_country: false, number_of_add_countries: 0, add_countries: [],add_countries_votes:[],
             all_treaties: [], number_of_treaties: 0,violations_counter:0,all_violated_treaty_id: [], all_violated_treaty_votes: [],
-            victims_list: []
+            victims_list: [], balance: 0
           };
 
   componentDidMount = async () => {
@@ -54,6 +51,7 @@ class App extends Component {
       await this.get_violations_id();
       await this.votes_list_break_treaty();
       await this.victims_list();
+      await this.get_balance();
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -150,6 +148,12 @@ class App extends Component {
     // console.log(this.state.number_of_add_countries);
   }
 
+  get_balance= async () => {
+    const {contract } = this.state;
+    const balance = await contract.methods.smart_contract_balance().call();
+    const convert_bal = parseInt(balance)/1000000000000000;
+    await this.setState({balance: convert_bal});
+  }
   vote_country = async (country_name,address) => {
       const {contract } = this.state;
       const id=0;
@@ -244,6 +248,7 @@ class App extends Component {
             all_treaties={this.state.all_treaties}
             violations_counter={this.state.violations_counter}
             numberofCountries_={this.state.numberofCountries} 
+            balance={this.state.balance}
             />}/>
 
             <Route path='/countriesAddress' element={<CountriesAddress key="count" 

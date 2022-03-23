@@ -41,7 +41,9 @@ export default class Home extends Component {
       violations_counter={this.props.violations_counter}
       numOfCountries={this.props.numberofCountries_}
       />
-
+      <div className="container" >
+      <h2 className="page-section__title" >Balance of Smart Contract: <span style={{color:'green'}}>${this.props.balance} Billion Dollars</span></h2>
+      </div><br/><br/><br/>
       <Contact/>
 </div>
   </div>

@@ -16,12 +16,7 @@ export default function Contact() {
   <hr style={{border: '0',borderTop: '1px solid #525B60',display:'block',marginTop: '40px'}} />
   <div className="container text-center">
     <div className="social-icon">
-      <ul>
-        <li><a href="#"><i className="flaticon-facebook-letter-logo"></i></a></li>
-        <li><a href="#"><i className="flaticon-twitter-logo"></i></a></li>
-        <li><a href="#"><i className="flaticon-behance-logo"></i></a></li>
-        <li><a href="#"><i className="flaticon-dribbble-logo"></i></a></li>
-      </ul>
+      
     </div>
     <p className="footer__paragraph">Copyright &copy; International Block Chain , All Rights Reserved.</p>
   </div>

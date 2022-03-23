@@ -1,7 +1,6 @@
 import React from "react";
 import "../assets/fonts/flat-icon/flaticon.css";
 import "../assets/bootstrap/css/bootstrap.min.css";
-import India from "../assets/images/india.png";
 import "../css/styles.css";
 import TREATY from "../assets/images/treatyimg.png";
 import TREATYBREAK from "../assets/images/treatybreak.png";

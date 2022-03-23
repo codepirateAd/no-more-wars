@@ -1861,12 +1861,12 @@
     "80001": {
       "events": {},
       "links": {},
-      "address": "0x9EE9d5C86690EA2fCb39E3594ED0BEA77f8DCF3D",
-      "transactionHash": "0x72858ad5c292ad362d28e2e002f5217bee4a9cbeb62aeb0baedf4d93d5092c9a"
+      "address": "0xB2acFFdC5C0e091145cC63fe3bdE43801326b733",
+      "transactionHash": "0xe017af5f26c88caa242caa8dde2be98dc7fe932950a36aa6648ab9b12bba4ab6"
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-03-22T06:41:49.237Z",
+  "updatedAt": "2022-03-23T12:49:28.160Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
