@@ -11,7 +11,7 @@ export default class Treaties extends Component {
       <div className="container about__container--narrow">
           <h2 className="page-section__title" style={{marginTop: '50px',float:'left'}}>Recent Treaties</h2>
           <br />
-        {[...Array(parseInt(this.props.number_of_treaties>5?5:this.props.number_of_treaties))].map((x, i) =>
+        {[...Array(parseInt(this.props.number_of_treaties>3?3:this.props.number_of_treaties))].map((x, i) =>
         
           <div className="card" style={{marginTop: '100px'}}>
             <h3><b>Treaty id: {this.props.number_of_treaties-(i+1)}</b></h3>

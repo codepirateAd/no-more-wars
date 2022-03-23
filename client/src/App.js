@@ -37,7 +37,7 @@ class App extends Component {
         SimpleStorageContract.abi,
         deployedNetwork && deployedNetwork.address,
       );
-
+        
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
       this.setState({ web3, accounts, contract: instance }, this.showOwner);
@@ -55,7 +55,7 @@ class App extends Component {
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
-        `Failed to load web3, accounts, or contract. Check console for details.`,
+        `Please switch to a Desktop to connect to No More Wars Blockchain`,
       );
       console.error(error);
     }
@@ -237,7 +237,7 @@ class App extends Component {
   }
   render() {
     if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
+      return <div></div>;
     }
     return (
       <div>
