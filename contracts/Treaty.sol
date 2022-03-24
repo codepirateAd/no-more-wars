@@ -165,14 +165,13 @@ contract Treaty {
                     remove(index_of_country);
                     votes[topic]=0;
                 }
-            else if(flag==3){
+            }
+            if(flag==3){
                         address voter_country=all_treaties[_id].country2;
                         if(msg.sender == voter_country)
                             all_treaties[_id].agreement_country2=true;
 
                    }
-
-            }
         }
     
 

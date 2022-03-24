@@ -26,7 +26,7 @@ class App extends Component {
     try {
       // Get network provider and web3 instance.
       const web3 = await getWeb3();
-
+      console.log(web3);
       // Use web3 to get the user's accounts.
       const accounts = await web3.eth.getAccounts();
 
@@ -58,12 +58,12 @@ class App extends Component {
         window.location='/';
       }
       else{
-      alert(
-        `Please switch to a Desktop to connect to No More Wars Blockchain and make sure MetaMask extension is installed`,
-      );
+      // alert(
+      //   `Please switch to a Desktop to connect to No More Wars Blockchain and make sure MetaMask extension is installed`,
+      // );
       let arr = [];
-      arr.push('No more wars Connection Error this may be due to two reasons-');
-      arr.push('1. If you are on phone switch to a Desktop computer');
+      arr.push('"No more wars Connection Error" this may be due to two reasons-');
+      arr.push('1. If you are on phone switch to a Desktop computer.');
       arr.push('2. MetaMask extension must be installed to log in to the Blockchain ');
       this.setState({extra_error_msg: arr});
       console.error(error);
@@ -250,9 +250,9 @@ class App extends Component {
       return <div className="container about__container--narrow">
       <h2 className="page-section__title" style={{marginTop: '50px'}}>Connecting to MetaMask......</h2>
         <br/><br/>
-        <h3>{this.state.extra_error_msg[0]}</h3>
-        <h3>&nbsp;&nbsp;&nbsp;&nbsp;{this.state.extra_error_msg[1]}</h3>
-        <h3>&nbsp;&nbsp;&nbsp;&nbsp;{this.state.extra_error_msg[2]}</h3>
+        <h3 style={{color: 'red',width: '70%', margin: 'auto'}}>{this.state.extra_error_msg[0]}</h3><br/>
+        <h3 style={{color: 'red',width: '70%', margin: 'auto'}}>&nbsp;&nbsp;&nbsp;&nbsp;{this.state.extra_error_msg[1]}</h3><br/>
+        <h3 style={{color: 'red',width: '70%', margin: 'auto'}}>&nbsp;&nbsp;&nbsp;&nbsp;{this.state.extra_error_msg[2]}</h3><br/>
       </div>
     }
     return (

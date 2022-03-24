@@ -19,8 +19,7 @@ export default class Nav extends Component {
           <span className="icon-bar"></span>
           <span className="icon-bar"></span> 
         </button>
-        <a className="navbar-brand" href="/">&nbsp;No More Wars</a>
-        {/* {/* <i className="fa-solid fa-peace"></i> No More Wars */}
+        <a className="navbar-brand" href="/">&nbsp;No More Wars</a> 
       </div>
       <div className="collapse navbar-collapse" id="myNavbar">
         <ul className="nav navbar-nav">
