@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import SimpleStorageContract from "./contracts/Treaty.json";
 import getWeb3 from "./getWeb3";
 import Home from "./Components/Home";
 import Nav from "./Components/Nav";
@@ -19,7 +19,7 @@ class App extends Component {
   state = { OwnerofContract: ' ', web3: null, accounts: null, contract: null, countries: [], 
             numberofCountries: 0, is_country: false, number_of_add_countries: 0, add_countries: [],add_countries_votes:[],
             all_treaties: [], number_of_treaties: 0,violations_counter:0,all_violated_treaty_id: [], all_violated_treaty_votes: [],
-            victims_list: [], balance: 0
+            victims_list: [], balance: 0, extra_error_msg: []
           };
 
   componentDidMount = async () => {
@@ -54,10 +54,20 @@ class App extends Component {
       await this.get_balance();
     } catch (error) {
       // Catch any errors for any of the above operations.
+      if(window.location.pathname==='/treatybreak'){
+        window.location='/';
+      }
+      else{
       alert(
-        `Please switch to a Desktop to connect to No More Wars Blockchain`,
+        `Please switch to a Desktop to connect to No More Wars Blockchain and make sure MetaMask extension is installed`,
       );
+      let arr = [];
+      arr.push('No more wars Connection Error this may be due to two reasons-');
+      arr.push('1. If you are on phone switch to a Desktop computer');
+      arr.push('2. MetaMask extension must be installed to log in to the Blockchain ');
+      this.setState({extra_error_msg: arr});
       console.error(error);
+      }
     }
   };
   victims_list = async () => {
@@ -237,7 +247,13 @@ class App extends Component {
   }
   render() {
     if (!this.state.web3) {
-      return <div></div>;
+      return <div className="container about__container--narrow">
+      <h2 className="page-section__title" style={{marginTop: '50px'}}>Connecting to MetaMask......</h2>
+        <br/><br/>
+        <h3>{this.state.extra_error_msg[0]}</h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;{this.state.extra_error_msg[1]}</h3>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;{this.state.extra_error_msg[2]}</h3>
+      </div>
     }
     return (
       <div>

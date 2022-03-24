@@ -8,7 +8,6 @@ export default class Violation extends Component {
   
   componentDidMount = () => {
     
-      const timer = setTimeout(() => console.log('Initial timeout!'), 10000);
         var span = document.getElementsByClassName("close")[0];
         var modal = document.getElementById("myModal");
         span.onclick = function() {
@@ -19,8 +18,7 @@ export default class Violation extends Component {
         span1.onclick = function() {
         modal1.style.display = "none";
         }
-
-      
+              
       }
   
   vote_to_country = async () => {
@@ -94,7 +92,7 @@ export default class Violation extends Component {
           <div className="card" style={{marginTop: '100px',display: this.props.all_violated_treaty_votes[i]>0?`block`:`none`}} >
             <h3><b>Treaty id: {this.props.all_violated_treaty_id[i]}</b></h3>
             <p className="price">Total votes: {this.props.all_violated_treaty_votes[i]}</p>
-            <p>  { this.props.all_treaties[this.props.number_of_treaties-(this.props.all_violated_treaty_id[i]+1)].treaty_text}</p>
+            <p>  {this.props.all_treaties[this.props.number_of_treaties-(this.props.all_violated_treaty_id[i]+1)].treaty_text}</p>
             <p>Vote for {this.props.victims_list[i]}</p>
             <p>
               <button className="primary btn-primary" onClick={() => this.vote_break_treaty('Break'+i,this.props.all_violated_treaty_id[i],this.props.victims_list[i])}>VOTE</button>

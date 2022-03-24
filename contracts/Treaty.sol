@@ -2,7 +2,7 @@
 pragma solidity >=0.7.0 <0.9.0;
 
  
-contract SimpleStorage {
+contract Treaty {
 //structure for treaty
     struct Contracts{
         address country1;
