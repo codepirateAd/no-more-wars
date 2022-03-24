@@ -88,7 +88,6 @@ export default class Violation extends Component {
           <h2 className="page-section__title">Pending Violation List</h2>
           
          {[...Array(parseInt(this.props.violations_counter))].map((x, i) =>
-          
           <div className="card" style={{marginTop: '100px',display: this.props.all_violated_treaty_votes[i]>0?`block`:`none`}} >
             <h3><b>Treaty id: {this.props.all_violated_treaty_id[i]}</b></h3>
             <p className="price">Total votes: {this.props.all_violated_treaty_votes[i]}</p>
