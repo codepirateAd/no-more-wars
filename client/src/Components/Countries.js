@@ -13,8 +13,8 @@ export default function Countries(props) {
       <div className="container about__container--narrow">
         <h2 className="page-section__title" style={{float:'left'}}>Information from the BlockChain</h2>
         <br/><br/><br/><br/><br/>
-        <div class="columns">
-          <div class="column">
+        <div className="columns">
+          <div className="column">
 
         <div className="flip-card">
           <div className="flip-card-inner">
@@ -37,7 +37,7 @@ export default function Countries(props) {
         </div>
         </div>
 
-        <div class="column">
+        <div className="column">
         <div className="flip-card" >
           <div className="flip-card-inner">
             <div className="flip-card-front">
@@ -58,7 +58,7 @@ export default function Countries(props) {
           </div>
         </div>
         </div>
-        <div class="column">
+        <div className="column">
         <div className="flip-card">
           <div className="flip-card-inner">
             <div className="flip-card-front">

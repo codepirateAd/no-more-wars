@@ -2,7 +2,7 @@ const path = require("path");
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 const fs = require('fs');
-const mnemonic = 'digital garbage traffic fringe sense identify ship august feature blind true monkey';
+const mnemonic = '';
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
