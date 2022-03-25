@@ -134,8 +134,8 @@ contract Treaty {
     //if the treaty breaks for some country the money is tranferred to the victims account
     function withdraw_money_to(address payable _to) public {
         // _to.transfer(0.3 ether); 
-        _to.transfer(0.003 ether); 
-        smart_contract_balance-=0.003 ether;
+        _to.transfer(0.03 ether); 
+        smart_contract_balance-=0.03 ether;
     }
 
     // find country who have violated the treaty
@@ -178,7 +178,7 @@ contract Treaty {
     // add country to the blockchain
     function add_country(string memory country_to_add, address address_of_country) payable public {
         // require(msg.value>=0.3 ether, "Minimum 0.3 ether required");
-        require(msg.value>=0.003 ether, "Minimum 0.3 ether required");
+        require(msg.value>=0.03 ether, "Minimum 0.3 ether required");
         smart_contract_balance+=msg.value;  // store the required cryto as reserved
         bool is_country = is_country_check(msg.sender);
         require(is_country,"Unauthorised Access");

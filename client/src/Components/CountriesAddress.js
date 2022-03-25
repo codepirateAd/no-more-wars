@@ -28,7 +28,7 @@ export default class CountriesAddress extends Component {
 };
   send_transac_cryto = async () => {
     // const i = parseInt(this.state.countries[parseInt(this.state.index)]);
-    await this.props.transac(this.state.countries[this.state.index],this.state.current_val);
+    await this.props.transac(this.state.countries[this.state.index],this.state.current_val*1000000000000000000);
     window.location = '/';
 
   }
@@ -69,7 +69,7 @@ export default class CountriesAddress extends Component {
           <div className="modal-content">
             <div className="modal-header">
               <span className="close">&times;</span>
-              <h2>SEND TRANSACTION TO: (IN WEI)</h2>
+              <h2>SEND TRANSACTION TO: (IN MATIC)</h2>
             </div>
             <div className="modal-body">
             <b>ADDRESS: </b> <p id='modal_para' style={{marginLeft: '15px'}}>Address </p>

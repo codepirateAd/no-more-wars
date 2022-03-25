@@ -161,7 +161,7 @@ class App extends Component {
   get_balance= async () => {
     const {contract } = this.state;
     const balance = await contract.methods.smart_contract_balance().call();
-    const convert_bal = parseInt(balance)/1000000000000000;
+    const convert_bal = parseInt(balance)/10000000000000000;
     await this.setState({balance: convert_bal});
   }
   vote_country = async (country_name,address) => {
@@ -213,7 +213,7 @@ class App extends Component {
    add_country = async (country_name,country_add) => {
     const {contract } = this.state;
     // await contract.methods.add_country("Russia","0xa3414D83F6E0Eef9315721E05676081630482111").send({ from: this.state.accounts[0], value: 3000000000000000 });
-    await contract.methods.add_country(country_name,country_add).send({ from: this.state.accounts[0], value: 3000000000000000 });
+    await contract.methods.add_country(country_name,country_add).send({ from: this.state.accounts[0], value: 30000000000000000 });
   }
 
     transaction_to_country = async (add,x) => {
