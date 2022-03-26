@@ -2,7 +2,7 @@
 
 Website - https://no-more-wars.pages.dev/
 
-# To Test the network you can get 
+# To Test the network
 Mnemonics of all accounts just click on add accounts to get the next country address <br/>
 'digital garbage traffic fringe sense identify ship august feature blind true monkey'
 
